@@ -1,0 +1,29 @@
+Siktar på VG.
+
+1-När använder man add respektive commit?
+
+Man använder git add när man vill säga till git att följande filerna ska vara med i nästa commit Punkt betyder alla filer, i övrigt kan man använda enskilda filnamn eller filter.
+En commit är en uppsättning av ändringar (ett ändringssteg i evolutionen) av vår repository.
+Man använder git commit när man vill skapa en commit med ändringarna som har signalerats genom att använda git add innan.
+git commit innebär att utvecklaren har markerat en förändring.
+
+2-Vad är pull repektive push?
+
+Man laddar upp till "remote repository" genom att använda git push och laddar hem nya commits från "remote repository" genom att använda git pull.
+
+3-När använder man log respektive status?
+
+Git log-kommandot visar commits i ett Git repository. Som standard visar git log-kommandot commit-hash, commit-meddelandet och annan commit-metadata.
+Kommandot git status visar tillståndet för arbetskatalogen och "staging area". Det låter dig se vilka ändringar som ligger i "staging area" och vilka som inte ligger i "staging area". Kommandot git status visar också filka filer som inte spåras av Git. (Untracked files)
+
+4-Hur kan man formulera sig i sina commit-meddelanden?
+
+Meddelandet är till för att man ska känna igen förändringen när man listar alla versioner av filen, så att man snabbt kan hitta tillbaks till ett bra grundläge om det visat sig att de senaste commitsen inte funkade som de skulle, dvs att den kod man hade skrivit inte gav det resultat som man hade tänkt.
+
+5-Det finns flera sätt att rulla tillbaka koden till ett tidigare tillstånd. Förklara skillnaden och motivera när man skulle använda den ena eller andra metoden. Ge exempel på de kommandon du använder för att göra detta och vissa att det fungerar, vilken output du fick från git-kommandona. Tips: Gör exemplen med att backa i en branch så att master fortfarande är korrekt. 
+
+Ja, det finns flera sätt för att rulla koden till ett tidigare tillstånd:
+git revert och git reset är två av vanligaste sätten.
+Man använder git revert när man inte vill ta bort något gammalt commit, dvs. alla commitsen kommer finnas kvar men en ny commit skapas.
+Man använder git reset när man inte bryr sig om ett specifikt commit tas bort. 
+Om man jobbar i en stor grupp eller team då är det nästan alltid bättre att använda git revert kommandot så att alla kan se vad som har hänt och vilka saker som har ändrats i varje steg.
